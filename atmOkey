@@ -1,0 +1,39 @@
+
+def atmDev():
+  print('X'*20, 'THIS IS WONDER BANK', 'X'*20)
+  print('#',' '*57,'#')
+  print('X'*61)
+  print('1. Existing customer login.\n2. Create a new account.')
+  step = int(input('Select an option to proceed: '))
+  while True:
+    if step not in [1,2]:
+      print('Select between 1 and 2')
+      step = int(input('Select an option to proceed: '))
+      continue
+    else:
+      break
+  if step == 1:
+    print('Welcome to Login page!')
+    usern = input('Enter username: ')
+    passwd = p.getpass(prompt='Enter password: ')
+    if login.loginAuth(usern,passwd):
+      print('Your login was successful')
+      dbod.dashBoard(usern,passwd)
+      choice = int(input('Enter your choice:1,2,3,4: '))
+      while True:
+        if choice not in [1,2,3,4]:
+          print('Select options 1 to 4.')
+          choice = int(input('Enter your choice:1,2,3,4: '))
+          continue
+        else:
+          break
+      if choice == 1:
+        dep.cashDep(usern,passwd)
+
+
+
+
+  elif step == 2:
+    pass
+
+atmDev()
